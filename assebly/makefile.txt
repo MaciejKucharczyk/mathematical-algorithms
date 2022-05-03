@@ -1,0 +1,4 @@
+all: fibb_c
+
+fibb_c: fibb_c.c fibb.s timestamp.s
+        gcc -m32 fibb.s timestamp.s fibb_c.c -o fibb
