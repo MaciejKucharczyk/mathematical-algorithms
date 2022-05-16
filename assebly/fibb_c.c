@@ -1,17 +1,22 @@
 #include <stdio.h>
+
+
+unsigned long fibb(unsigned long n);
+unsigned long long timestamp();
+
 int main()
 {
-            unsigned long term, result;
-                unsigned long long tstamp1, tstamp2;
+    unsigned long term, result;
+    unsigned long long tstamp1, tstamp2;
 
-                    scanf("%lu", &term);
+    scanf("%lu", &term);
 
-                        tstamp1 = timestamp();
-                            result = fibb(term);
-                                tstamp2 = timestamp();
+    tstamp1 = timestamp();
+    result = fibb(term);
+    tstamp2 = timestamp();
 
-                                    printf("Result: %lu\n", result);
-                                        printf("Cycles: %llu\n", tstamp2-tstamp1);
+    printf("Result: %lu\n", result);
+    printf("Cycles: %llu\n", tstamp2 - tstamp1);
 
-                                            return 0;
+    return 0;
 }

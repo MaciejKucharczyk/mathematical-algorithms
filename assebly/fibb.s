@@ -1,5 +1,4 @@
 .data
-format: .asciz "%lu\n"
 
 .text
 
