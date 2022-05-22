@@ -5,18 +5,6 @@ class SystemConversion:
     def __init__(self, number):
         self.number = number
 
-    def random_dec_generator()-> int:
-        number = random.randint(100,10000)
-        return number
-
-    def random_bin_generator()-> int:
-        bin_num = random.randint(0,1)
-        return bin_num
-    
-    def random_hex_generator() -> string:
-        hex_num = str(random.choice([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F']))
-        return hex_num
-
     def dec_to_oct(dec_num):
         result =[]
         r=0
@@ -43,7 +31,7 @@ class SystemConversion:
         result.reverse()
         return ''.join(result)
 
-    def dec_to_hex(dec_num)->string:
+    def dec_to_hex(dec_num)->string:     
         result = []
         r=0
         number = dec_num
@@ -131,10 +119,3 @@ class SystemConversion:
         number=int(_number)
         result=SystemConversion.bin_to_dec(number)
         return result
-
-
-
-
-lista = ['F', '1', '2']
-wynik=SystemConversion.hex_to_dec(lista)
-print(wynik)
