@@ -29,14 +29,14 @@ def main():
     """
     Nazwy plikow
     """
-    fibb_file = "Fibb.txt"
-    nwd_file = "NWD.txt"
-    hex_bin_file = "Hex_Bin.txt"
-    bin_hex_file = "Bin_Hex.txt"
-    dec_bin_file = "Dec_Bin.txt"
-    bin_dec_file = "Bin_Dec.txt"
-    dec_hex_file = "Dec_Hex.txt"
-    hex_dec_file = "Hex_Dec.txt" 
+    fibb_file = "Fibb.csv"
+    nwd_file = "NWD.csv"
+    hex_bin_file = "Hex_Bin.csv"
+    bin_hex_file = "Bin_Hex.csv"
+    dec_bin_file = "Dec_Bin.csv"
+    bin_dec_file = "Bin_Dec.csv"
+    dec_hex_file = "Dec_Hex.csv"
+    hex_dec_file = "Hex_Dec.csv" 
 
     print("==== Pomiary ====")
     print("Wybierz opcje:\n")
