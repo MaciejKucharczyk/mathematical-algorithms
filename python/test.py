@@ -1,8 +1,15 @@
 from tracemalloc import stop
 import system_conversion
 import algorithms
-import generator
 import time
+
+def AddToFile(filename, time)-> None:
+    file = open(filename, "a")
+    if file.writable():
+        file.write(str(time))
+        file.write('\n')
+    file.close()
+
 
 def main():
     start=0
@@ -19,6 +26,17 @@ def main():
     hex_num = [1, 0, 'A', 'B', 9, 3, 'F', 6, 'D']
     dec_num = 1025456736
 
+    """
+    Nazwy plikow
+    """
+    fibb_file = "Fibb.txt"
+    nwd_file = "NWD.txt"
+    hex_bin_file = "Hex_Bin.txt"
+    bin_hex_file = "Bin_Hex.txt"
+    dec_bin_file = "Dec_Bin.txt"
+    bin_dec_file = "Bin_Dec.txt"
+    dec_hex_file = "Dec_Hex.txt"
+    hex_dec_file = "Hex_Dec.txt" 
 
     print("==== Pomiary ====")
     print("Wybierz opcje:\n")
@@ -47,6 +65,7 @@ def main():
                     fibb_time=stop - start
                     avg_fibb=avg_fibb+fibb_time
                 avg_fibb=avg_fibb/iterator
+                AddToFile(fibb_file, avg_fibb)
                 print("Sredni czas: "+ str(avg_fibb) + " ns")
 
             case '2':
@@ -59,6 +78,7 @@ def main():
                     nwd_time = stop - start
                     avg_nwd=avg_nwd+nwd_time
                 avg_nwd=avg_nwd/iterator
+                AddToFile(nwd_file, avg_nwd)
                 print("Sredni czas: "+ str(avg_nwd) + " ns")
 
             case '3':
@@ -71,6 +91,7 @@ def main():
                     dec_bin_time=stop-start
                     avg_dec_bin=avg_dec_bin+dec_bin_time
                 avg_dec_bin=avg_dec_bin/iterator
+                AddToFile(dec_bin_file, avg_dec_bin)
                 print("Czas: "+ str(avg_dec_bin) + " ns")
 
             case '4':
@@ -83,6 +104,7 @@ def main():
                     dec_hex_time=stop-start
                     avg_dec_hex=avg_dec_hex+dec_hex_time
                 avg_dec_hex=avg_dec_hex/iterator
+                AddToFile(dec_hex_file, avg_dec_hex)
                 print("Czas: "+ str(avg_dec_hex) + " ns")
 
             case '5':
@@ -95,6 +117,7 @@ def main():
                     bin_hex_time=stop-start
                     avg_bin_hex=avg_bin_hex+bin_hex_time
                 avg_bin_hex=avg_bin_hex/iterator
+                AddToFile(bin_hex_file, avg_bin_hex)
                 print("Czas: "+ str(avg_bin_hex) + " ns")
 
             case '6':
@@ -107,6 +130,7 @@ def main():
                     bin_dec_time=stop-start
                     avg_bin_dec=avg_bin_dec + bin_dec_time
                 avg_bin_dec=avg_bin_dec/iterator
+                AddToFile(bin_dec_file, avg_bin_dec)
                 print("Czas: "+ str(avg_bin_dec) + " ns")
 
             case '7':
@@ -119,6 +143,7 @@ def main():
                     hex_dec_time=stop-start
                     avg_hex_dec=avg_hex_dec+hex_dec_time
                 avg_hex_dec=avg_hex_dec/iterator
+                AddToFile(hex_dec_file, avg_hex_dec)
                 print("Czas: "+ str(avg_hex_dec) + " ns")
 
             case '8': 
@@ -131,6 +156,7 @@ def main():
                     hex_bin_time=stop-start
                     avg_hex_bin=avg_hex_bin+hex_bin_time
                 avg_hex_bin=avg_hex_bin/iterator
+                AddToFile(hex_bin_file, avg_hex_bin)
                 print("Czas: "+ str(avg_hex_bin) + " ns")
 
             case _:
